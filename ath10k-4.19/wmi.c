@@ -4123,8 +4123,6 @@ static void ath10k_radar_detected(struct ath10k *ar)
 	 */
 	if (ar->dfs_block_radar_events)
 		ath10k_info(ar, "DFS Radar detected, but ignored as requested\n");
-	else
-		ieee80211_radar_detected(ar->hw);
 }
 
 static void ath10k_radar_confirmation_work(struct work_struct *work)
